@@ -74,11 +74,11 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-LOGIN_URL = '/accounts/login/'# kirish uchun
+LOGIN_URL = '/login/'# kirish uchun
 LOGIN_REDIRECT_URL = '/' #kirish amalga oshganda
 
-LOGOUT_URL = '/accounts/logout/'
-LOGOUT_REDIRECT_URL = '/accounts/login/'
+LOGOUT_URL = '/logout/'
+LOGOUT_REDIRECT_URL = '/login/'
 
 
 # Database

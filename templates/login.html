@@ -1,0 +1,29 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block content %}
+	<div class="container mt-5">
+		<center>
+			<div class="card" style="width: 300px">
+				<div class="card-header">
+					<h2>Admin uchun kirish</h2>
+				</div>
+				<form method="POST">
+					<div class="card-body">
+						{% csrf_token %}
+						<label>Username</label>
+						{{form.username}}
+						<label>Parol</label>
+						{{form.password}}	
+					</div>
+					<div class="card-footer">
+						<button type="submit" class="btn btn-primary">Kirish</button>
+					</div>
+				</form>
+			</div>
+		</center>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$('input').addClass('form-control mb-3');
+	</script>
+{% endblock content %}
